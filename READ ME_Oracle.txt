@@ -1,0 +1,33 @@
+USER AND PASSWORD LOCALHOST
+USERNAME/WORKSPACE: AFFAN
+PASSWORD: 12345678
+
+USERNAME/WORKSPACE: BLACKCARAVAN
+PASSWORD: 12345678
+
++CONNECT AS NORMAL USER
+connect username;
+
++CONNECT AS SYSDBA
+connect / as sysdba;
+
++CREATE USER OUT OF THIN AIR
+connect/ as sysdba;
+create user b identified by "password"; 
+grant all privileges to b;
+
++GRANT PRIVILEGES
+connect/ as sysdba;
+grant all privileges to a;
+
++GRANT PERMISSION
+GRANT, CONNECT RESOURCE TO username;
+
++GRANT SCHEMA
+create user schemaA identified by schemaA;
+
++ALTER SCHEMA
+ALTER SESSION SET CURRENT SCHEMA = "SCHEMA";
+
++INCREASING LINE SIZE
+SET linesize 500;
